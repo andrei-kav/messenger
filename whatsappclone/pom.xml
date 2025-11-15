@@ -8,10 +8,10 @@
 		<version>3.4.10</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.alibou</groupId>
-	<artifactId>whatsappclone</artifactId>
+	<groupId>com.andreik</groupId>
+	<artifactId>messenger</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>WhatsApp-Clone-API</name>
+	<name>Messenger-API</name>
 	<description>WhatsApp clone API</description>
 	<url/>
 	<licenses>
