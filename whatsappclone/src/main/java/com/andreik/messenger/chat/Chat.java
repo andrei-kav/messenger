@@ -10,7 +10,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.ManyToAny;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -33,14 +32,14 @@ public class Chat extends BaseAuditingEntity {
     @GeneratedValue(strategy = UUID)
     private String id;
 
-    @ManyToAny
+    @ManyToOne
     @JoinColumn(name = "sender_id")
     private User sender;
-    @ManyToAny
+    @ManyToOne
     @JoinColumn(name = "recipient_id")
     private User recipient;
     @OneToMany(mappedBy = "chat", fetch = FetchType.EAGER)
-    @OrderBy("createdDate")
+    @OrderBy("createdDate DESC")
     private List<Message> messages;
 
     @Transient
